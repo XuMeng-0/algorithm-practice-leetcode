@@ -16,6 +16,10 @@ public class Solution0205 {
             String characterFromT = String.valueOf(t.charAt(i));
             String targetCharacter = characterMap.get(characterFromS);
             if (targetCharacter == null) {
+                String substringOfT = t.substring(0, i);
+                if (substringOfT.contains(characterFromT)) {
+                    return false;
+                }
                 characterMap.put(characterFromS, characterFromT);
             } else if (!targetCharacter.equals(characterFromT)) {
                 return false;
