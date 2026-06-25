@@ -43,4 +43,11 @@ class Solution0205Test {
         assertTrue(solution.isIsomorphic(s, t));
     }
 
+    @Test
+    public void test6() {
+        String s = "badc";
+        String t = "baba";
+        assertFalse(solution.isIsomorphic(s, t));
+    }
+
 }
