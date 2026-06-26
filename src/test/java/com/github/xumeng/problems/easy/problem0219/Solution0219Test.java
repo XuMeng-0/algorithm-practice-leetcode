@@ -43,4 +43,11 @@ class Solution0219Test {
         assertFalse(solution.containsNearbyDuplicate(nums, k));
     }
 
+    @Test
+    public void test6() {
+        int[] nums = {1, 2, 0, 0, 3, 1};
+        int k = 4;
+        assertTrue(solution.containsNearbyDuplicate(nums, k));
+    }
+
 }
