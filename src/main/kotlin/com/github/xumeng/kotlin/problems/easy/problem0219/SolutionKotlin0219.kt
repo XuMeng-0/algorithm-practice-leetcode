@@ -1,4 +1,4 @@
-package com.github.xumeng.problems.easy.problem0219
+package com.github.xumeng.kotlin.problems.easy.problem0219
 
 class SolutionKotlin0219 {
 
