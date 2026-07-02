@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionJava0222Test {
 
-    private final SolutionJava0222 solution = new SolutionJava0222();
+    private final SolutionJava0222S1 solution = new SolutionJava0222S1();
 
     @Test
     public void test1() {

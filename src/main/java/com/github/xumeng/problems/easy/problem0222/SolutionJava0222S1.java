@@ -2,7 +2,7 @@ package com.github.xumeng.problems.easy.problem0222;
 
 import com.github.xumeng.common.datastructure.TreeNode;
 
-public class SolutionJava0222 {
+public class SolutionJava0222S1 {
 
     public int countNodes(TreeNode root) {
         int count = 0;
