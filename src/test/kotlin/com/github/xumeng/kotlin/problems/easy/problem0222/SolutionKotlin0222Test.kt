@@ -6,7 +6,8 @@ import org.junit.jupiter.api.Test
 
 class SolutionKotlin0222Test {
 
-    private val solution = SolutionKotlin0222S1()
+    //    private val solution = SolutionKotlin0222S1()
+    private val solution = SolutionKotlin0222S2()
 
 
     @Test
