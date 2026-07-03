@@ -9,7 +9,7 @@
 Java
 
 ```
-src/main/java/com/github/xumeng/  
+src/main/java/com/github/xumeng/java  
 ├── common/           # 通用工具类、自定义数据结构  
 ├── problems/         # 题目 
 │   ├── easy/         # 简单难度  
@@ -20,7 +20,7 @@ src/main/java/com/github/xumeng/
 Kotlin
 
 ```
-src/main/kotlin/com/github/xumeng/  
+src/main/kotlin/com/github/xumeng/kotlin  
 ├── common/           # 通用工具类、自定义数据结构  
 ├── problems/         # 题目 
 │   ├── easy/         # 简单难度  
@@ -33,17 +33,20 @@ src/main/kotlin/com/github/xumeng/
 Java
 
 ```
-src/test/java/com/github/xumeng/
+src/test/java/com/github/xumeng/java
 ```
 
 Kotlin
 
 ```
-src/test/kotlin/com/github/xumeng/
+src/test/kotlin/com/github/xumeng/kotlin
 ```
 
 ### 题目描述
 
 ```
 docs/
+├── easy/         # 简单难度  
+├── medium/       # 中等难度  
+└── hard/         # 困难难度
 ```
