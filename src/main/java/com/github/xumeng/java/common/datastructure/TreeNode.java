@@ -1,4 +1,4 @@
-package com.github.xumeng.common.datastructure;
+package com.github.xumeng.java.common.datastructure;
 
 public class TreeNode {
 

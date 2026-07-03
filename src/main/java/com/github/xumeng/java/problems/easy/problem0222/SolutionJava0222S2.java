@@ -1,6 +1,6 @@
-package com.github.xumeng.problems.easy.problem0222;
+package com.github.xumeng.java.problems.easy.problem0222;
 
-import com.github.xumeng.common.datastructure.TreeNode;
+import com.github.xumeng.java.common.datastructure.TreeNode;
 
 public class SolutionJava0222S2 {
 

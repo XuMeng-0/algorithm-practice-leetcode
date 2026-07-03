@@ -1,4 +1,4 @@
-package com.github.xumeng.problems.easy.problem0219;
+package com.github.xumeng.java.problems.easy.problem0219;
 
 public class Solution0219 {
 

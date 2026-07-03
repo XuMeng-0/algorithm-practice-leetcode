@@ -1,5 +1,6 @@
-package com.github.xumeng.problems.easy.problem0205;
+package com.github.xumeng.java.problems.easy.problem0205;
 
+import com.github.xumeng.java.problems.easy.problem0205.Solution0205;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

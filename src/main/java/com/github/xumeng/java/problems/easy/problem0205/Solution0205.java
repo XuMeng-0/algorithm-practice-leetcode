@@ -1,4 +1,4 @@
-package com.github.xumeng.problems.easy.problem0205;
+package com.github.xumeng.java.problems.easy.problem0205;
 
 import java.util.HashMap;
 import java.util.Map;
