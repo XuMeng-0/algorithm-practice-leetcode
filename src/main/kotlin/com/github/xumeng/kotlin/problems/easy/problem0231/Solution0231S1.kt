@@ -9,8 +9,8 @@ class Solution0231S1 {
             return false
         }
         for (i in 0..<32) {
-            val power = 2.0.pow(i).toInt()
-            if (power == n) {
+            val power = 2.0.pow(i)
+            if (power == n.toDouble()) {
                 return true
             }
             if (power > n) {
