@@ -45,4 +45,11 @@ class Solution0231Test {
         assertFalse(result);
     }
 
+    @Test
+    public void test6() {
+        int n = 6;
+        boolean result = solution.isPowerOfTwo(n);
+        assertFalse(result);
+    }
+
 }
