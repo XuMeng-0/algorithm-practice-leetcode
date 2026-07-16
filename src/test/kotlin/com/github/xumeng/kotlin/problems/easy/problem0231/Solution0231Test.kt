@@ -48,4 +48,11 @@ class Solution0231Test {
         val result: Boolean = solution.isPowerOfTwo(n)
         assertFalse { result }
     }
+
+    @Test
+    fun test7() {
+        val n = 2147483647
+        val result: Boolean = solution.isPowerOfTwo(n)
+        assertFalse { result }
+    }
 }
