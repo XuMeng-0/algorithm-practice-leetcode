@@ -50,4 +50,10 @@ class Solution0263Test {
         assertFalse(isUgly);
     }
 
+    @Test
+    public void test8() {
+        boolean isUgly = solution.isUgly(9);
+        assertTrue(isUgly);
+    }
+
 }
