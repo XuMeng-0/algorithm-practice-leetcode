@@ -7,7 +7,7 @@ public class Solution0263 {
             return false;
         }
         int quotient = n;
-        for (int i = 1; i < quotient; i++) {
+        for (int i = 1; i <= quotient; i++) {
             quotient = n / i;
             if (n % i != 0) {
                 continue;
@@ -23,7 +23,7 @@ public class Solution0263 {
     }
 
     private boolean isPrime(int n) {
-        for (int i = 2; i < n / i; i++) {
+        for (int i = 2; i <= n / i; i++) {
             if (n % i == 0) {
                 return false;
             }
