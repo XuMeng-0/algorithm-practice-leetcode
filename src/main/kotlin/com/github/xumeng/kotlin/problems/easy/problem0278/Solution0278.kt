@@ -9,12 +9,21 @@ class Solution0278 {
     }
 
     fun firstBadVersion(n: Int): Int {
-        for (i in 1..n) {
-            if (isBadVersion(i)) {
-                return i
+        var start = 1
+        var end = n
+        var middle: Long
+        while (start < end) {
+            middle = (start.toLong() + end.toLong()) / 2
+            if (isBadVersion(middle.toInt())) {
+                end = middle.toInt()
+            } else {
+                if (start.toLong() == middle) {
+                    return end
+                }
+                start = middle.toInt()
             }
         }
-        return 1
+        return end
     }
 
     fun isBadVersion(version: Int): Boolean {
