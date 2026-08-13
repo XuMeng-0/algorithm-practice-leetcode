@@ -9,7 +9,22 @@ public class Solution0278 {
     }
 
     public int firstBadVersion(int n) {
-        return 1;
+        int start = 1;
+        int end = n;
+        int middle;
+        while (start < end) {
+            long sum = (long) start + (long) end;
+            middle = (int) (sum / 2);
+            if (isBadVersion(middle)) {
+                end = middle;
+            } else {
+                if (start == middle) {
+                    return end;
+                }
+                start = middle;
+            }
+        }
+        return end;
     }
 
     private boolean isBadVersion(int version) {
