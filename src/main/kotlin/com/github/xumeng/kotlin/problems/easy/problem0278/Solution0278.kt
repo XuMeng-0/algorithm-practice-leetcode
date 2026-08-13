@@ -9,6 +9,11 @@ class Solution0278 {
     }
 
     fun firstBadVersion(n: Int): Int {
+        for (i in 1..n) {
+            if (isBadVersion(i)) {
+                return i
+            }
+        }
         return 1
     }
 
