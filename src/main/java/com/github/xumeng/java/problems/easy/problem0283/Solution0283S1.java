@@ -1,6 +1,6 @@
 package com.github.xumeng.java.problems.easy.problem0283;
 
-public class Solution0283 {
+public class Solution0283S1 {
 
     public void moveZeroes(int[] nums) {
         int length = nums.length;
