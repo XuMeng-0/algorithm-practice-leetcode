@@ -12,6 +12,12 @@ public class Solution0062 {
         if (n == 2) {
             return m;
         }
+        if (m == 3) {
+            return uniquePaths(m, n - 1) + n;
+        }
+        if (n == 3) {
+            return uniquePaths(m - 1, n) + m;
+        }
         return uniquePaths(m - 1, n) + uniquePaths(m, n - 1);
     }
 
