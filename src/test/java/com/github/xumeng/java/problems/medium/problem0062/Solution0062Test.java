@@ -64,4 +64,12 @@ class Solution0062Test {
         assertEquals(1677106640, paths);
     }
 
+    @Test
+    public void test8() {
+        int m = 100;
+        int n = 3;
+        int paths = solution.uniquePaths(m, n);
+        assertEquals(5050, paths);
+    }
+
 }
