@@ -20,11 +20,7 @@ public class Solution0345 {
             i++;
             j--;
         }
-        StringBuilder builder = new StringBuilder();
-        for (char character : characters) {
-            builder.append(character);
-        }
-        return builder.toString();
+        return new String(characters);
     }
 
     private boolean isNotVowel(char character) {
