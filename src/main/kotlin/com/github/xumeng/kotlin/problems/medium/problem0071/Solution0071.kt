@@ -8,26 +8,40 @@ class Solution0071 {
             canonicalPath = canonicalPath.removeSuffix("/")
         }
         val directories = canonicalPath.split("/").toMutableList()
+        removePointDirectory(directories)
+        removeDoublePointDirectory(directories)
+        if (directories.isEmpty()) {
+            directories.add("/")
+        }
+        canonicalPath = directories.joinToString("/")
+        return canonicalPath
+    }
+
+    private fun removePointDirectory(directories: MutableList<String>) {
         var i = directories.size - 1
-        while (i >= 0) {
-            if (directories.isEmpty()) {
-                directories.add("/")
-                break
-            }
+        while (i >= 0 && directories.isNotEmpty()) {
             val directory = directories[i]
             if (directory == ".") {
                 directories.removeAt(i)
             }
+            i--
+        }
+    }
+
+    private fun removeDoublePointDirectory(directories: MutableList<String>) {
+        var i = directories.size - 1
+        var count = 0
+        while (i >= 0 && directories.isNotEmpty()) {
+            val directory = directories[i]
             if (directory == "..") {
                 directories.removeAt(i)
-                if (i - 1 >= 0) {
-                    directories.removeAt(i - 1)
-                }
+                count++
+            } else if (count > 0) {
+                directories.removeAt(i)
+                count--
             }
             i--
         }
-        canonicalPath = directories.joinToString("/")
-        return canonicalPath
     }
 
 }
