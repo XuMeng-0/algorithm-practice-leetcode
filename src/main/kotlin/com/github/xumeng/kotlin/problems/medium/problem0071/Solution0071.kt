@@ -3,7 +3,7 @@ package com.github.xumeng.kotlin.problems.medium.problem0071
 class Solution0071 {
 
     fun simplifyPath(path: String): String {
-        var canonicalPath = path.replace("//", "/")
+        var canonicalPath = replaceDoubleSlash(path)
         if (canonicalPath.length > 1) {
             canonicalPath = canonicalPath.removeSuffix("/")
         }
@@ -13,6 +13,14 @@ class Solution0071 {
         canonicalPath = directories.joinToString("/")
         if (!canonicalPath.startsWith("/")) {
             canonicalPath = "/$canonicalPath"
+        }
+        return canonicalPath
+    }
+
+    private fun replaceDoubleSlash(path: String): String {
+        var canonicalPath = path
+        while (canonicalPath.contains("//")) {
+            canonicalPath = canonicalPath.replace("//", "/")
         }
         return canonicalPath
     }
