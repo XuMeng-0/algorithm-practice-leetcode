@@ -56,4 +56,12 @@ class Solution0071Test {
         assertEquals(expected, canonicalPath)
     }
 
+    @Test
+    fun test7() {
+        val path = "/a/./b/../../c/"
+        val canonicalPath = solution.simplifyPath(path)
+        val expected = "/c"
+        assertEquals(expected, canonicalPath)
+    }
+
 }
