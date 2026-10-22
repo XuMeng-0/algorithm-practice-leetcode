@@ -10,9 +10,6 @@ class Solution0071 {
         val directories = canonicalPath.split("/").toMutableList()
         removePointDirectory(directories)
         removeDoublePointDirectory(directories)
-        if (directories.isEmpty()) {
-            directories.add("/")
-        }
         canonicalPath = directories.joinToString("/")
         if (!canonicalPath.startsWith("/")) {
             canonicalPath = "/$canonicalPath"
