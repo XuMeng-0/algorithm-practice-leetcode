@@ -14,6 +14,9 @@ class Solution0071 {
             directories.add("/")
         }
         canonicalPath = directories.joinToString("/")
+        if (!canonicalPath.startsWith("/")) {
+            canonicalPath = "/$canonicalPath"
+        }
         return canonicalPath
     }
 
