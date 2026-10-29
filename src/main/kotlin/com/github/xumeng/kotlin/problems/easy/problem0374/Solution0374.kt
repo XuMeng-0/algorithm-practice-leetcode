@@ -19,7 +19,35 @@ class Solution0374 {
     }
 
     fun guessNumber(n: Int): Int {
-        return n
+        var min = 1
+        var max: Int = n
+        var middle: Int
+        var lastMiddle = 0
+        var result: Int
+        var start: Long = 1
+        var end: Long = n.toLong()
+        do {
+            middle = ((start + end) / 2).toInt()
+            result = guess(middle)
+            if (result < 0) {
+                start = min.toLong()
+                end = middle.toLong()
+                max = middle
+            }
+            if (result > 0) {
+                start = middle.toLong()
+                end = max.toLong()
+                min = middle
+            }
+            if (lastMiddle == middle) {
+                break
+            }
+            lastMiddle = middle
+        } while (result != 0)
+        if (result == 0) {
+            return middle
+        }
+        return max
     }
 
 }
