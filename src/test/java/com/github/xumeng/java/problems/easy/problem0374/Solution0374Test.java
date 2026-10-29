@@ -53,4 +53,13 @@ class Solution0374Test {
         assertEquals(pick, number);
     }
 
+    @Test
+    public void test6() {
+        int n = 2;
+        int pick = 2;
+        solution.setNumber(pick);
+        int number = solution.guessNumber(n);
+        assertEquals(pick, number);
+    }
+
 }
