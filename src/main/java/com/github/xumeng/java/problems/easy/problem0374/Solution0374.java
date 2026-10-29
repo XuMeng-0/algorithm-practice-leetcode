@@ -16,6 +16,7 @@ public class Solution0374 {
         int min = 1;
         int max = n;
         int middle;
+        int lastMiddle = 0;
         int result;
         long start = 1;
         long end = n;
@@ -32,7 +33,11 @@ public class Solution0374 {
                 end = max;
                 min = middle;
             }
+            if (lastMiddle == middle) {
+                break;
+            }
+            lastMiddle = middle;
         } while (result != 0);
-        return middle;
+        return result == 0 ? middle : max;
     }
 }
