@@ -3,6 +3,9 @@ package com.github.xumeng.java.problems.medium.problem0074;
 public class Solution0074 {
 
     public boolean searchMatrix(int[][] matrix, int target) {
+        if (target < matrix[0][0]) {
+            return false;
+        }
         int row = findRow(matrix, target);
         if (row == -1) {
             return false;
@@ -14,9 +17,6 @@ public class Solution0074 {
     private int findRow(int[][] matrix, int target) {
         if (matrix.length == 1) {
             return 0;
-        }
-        if (target < matrix[0][0]) {
-            return -1;
         }
         if (target > matrix[matrix.length - 1][0]) {
             return matrix.length - 1;
