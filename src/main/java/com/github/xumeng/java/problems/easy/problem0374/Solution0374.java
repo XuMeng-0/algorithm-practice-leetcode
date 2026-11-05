@@ -13,31 +13,28 @@ public class Solution0374 {
     }
 
     public int guessNumber(int n) {
-        int min = 1;
-        int max = n;
+        long min = 1;
+        long max = n;
         int middle;
         int lastMiddle = 0;
         int result;
-        long start = 1;
-        long end = n;
         do {
-            middle = (int) ((start + end) / 2);
+            middle = (int) ((min + max) / 2);
             result = guess(middle);
             if (result < 0) {
-                start = min;
-                end = middle;
                 max = middle;
             }
             if (result > 0) {
-                start = middle;
-                end = max;
                 min = middle;
+            }
+            if (result == 0) {
+                return middle;
             }
             if (lastMiddle == middle) {
                 break;
             }
             lastMiddle = middle;
-        } while (result != 0);
-        return result == 0 ? middle : max;
+        } while (min < max);
+        return (int) max;
     }
 }
