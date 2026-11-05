@@ -38,7 +38,7 @@ class Solution0374Test {
     @Test
     public void test4() {
         int n = 2147483647;
-        int pick = 13741823;
+        int pick = 2147483640;
         solution.setNumber(pick);
         int number = solution.guessNumber(n);
         assertEquals(pick, number);
