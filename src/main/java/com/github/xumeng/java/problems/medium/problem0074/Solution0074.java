@@ -3,11 +3,7 @@ package com.github.xumeng.java.problems.medium.problem0074;
 public class Solution0074 {
 
     public boolean searchMatrix(int[][] matrix, int target) {
-        int[] array = new int[matrix.length];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = matrix[i][0];
-        }
-        int row = findRow(array, target);
+        int row = findRow(matrix, target);
         if (row == -1) {
             return false;
         }
@@ -15,34 +11,34 @@ public class Solution0074 {
         return column != -1;
     }
 
-    private int findRow(int[] array, int target) {
-        if (array.length == 1) {
+    private int findRow(int[][] matrix, int target) {
+        if (matrix.length == 1) {
             return 0;
         }
-        if (target < array[0]) {
+        if (target < matrix[0][0]) {
             return -1;
         }
-        if (target > array[array.length - 1]) {
-            return array.length - 1;
+        if (target > matrix[matrix.length - 1][0]) {
+            return matrix.length - 1;
         }
         int middle;
         int i = 0;
-        int j = array.length - 1;
+        int j = matrix.length - 1;
         while (i < j) {
             middle = i + (j - i) / 2;
-            if (array[middle] == target) {
+            if (matrix[middle][0] == target) {
                 return middle;
             }
-            if (array[middle] < target) {
+            if (matrix[middle][0] < target) {
                 i = middle;
             }
-            if (array[i] < target && target < array[i + 1]) {
+            if (matrix[i][0] < target && target < matrix[i + 1][0]) {
                 return i;
             }
-            if (array[middle] > target) {
+            if (matrix[middle][0] > target) {
                 j = middle;
             }
-            if (array[j - 1] < target && target < array[j]) {
+            if (matrix[j - 1][0] < target && target < matrix[j][0]) {
                 return j;
             }
         }
