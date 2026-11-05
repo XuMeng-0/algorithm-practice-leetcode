@@ -18,7 +18,7 @@ public class Solution0074 {
         if (matrix.length == 1) {
             return 0;
         }
-        if (target > matrix[matrix.length - 1][0]) {
+        if (target >= matrix[matrix.length - 1][0]) {
             return matrix.length - 1;
         }
         int middle;
@@ -39,7 +39,7 @@ public class Solution0074 {
                 j = middle;
             }
             if (matrix[j - 1][0] < target && target < matrix[j][0]) {
-                return j;
+                return j - 1;
             }
         }
         return -1;
