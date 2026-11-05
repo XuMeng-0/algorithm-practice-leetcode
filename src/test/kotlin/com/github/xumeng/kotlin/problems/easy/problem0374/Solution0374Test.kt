@@ -38,7 +38,7 @@ class Solution0374Test {
     @Test
     fun test4() {
         val n = 2147483647
-        val pick = 13741823
+        val pick = 2147483640
         solution.setNumber(pick)
         val number = solution.guessNumber(n)
         assertEquals(pick, number)
