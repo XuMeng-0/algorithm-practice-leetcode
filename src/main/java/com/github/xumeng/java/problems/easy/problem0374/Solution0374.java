@@ -16,24 +16,19 @@ public class Solution0374 {
         int min = 1;
         int max = n;
         int middle;
-        int lastMiddle = 0;
         int result;
         do {
             middle = min + (max - min) / 2;
             result = guess(middle);
-            if (result < 0) {
-                max = middle;
-            }
-            if (result > 0) {
-                min = middle;
-            }
             if (result == 0) {
                 return middle;
             }
-            if (lastMiddle == middle) {
-                break;
+            if (result < 0) {
+                max = middle - 1;
             }
-            lastMiddle = middle;
+            if (result > 0) {
+                min = middle + 1;
+            }
         } while (min < max);
         return max;
     }
