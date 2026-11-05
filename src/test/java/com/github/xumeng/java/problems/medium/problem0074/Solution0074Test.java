@@ -125,4 +125,15 @@ class Solution0074Test {
         assertFalse(existent);
     }
 
+    @Test
+    public void test12() {
+        int[] array1 = {1, 3, 5, 7};
+        int[] array2 = {10, 11, 16, 20};
+        int[] array3 = {23, 30, 34, 60};
+        int[][] matrix = {array1, array2, array3};
+        int target = 23;
+        boolean existent = solution.searchMatrix(matrix, target);
+        assertTrue(existent);
+    }
+
 }
