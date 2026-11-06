@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test
 
 class Solution0075Test {
 
-    private val solution = Solution0075S1()
+    //    private val solution = Solution0075S1()
+    private val solution = Solution0075S2()
 
 
     @Test
