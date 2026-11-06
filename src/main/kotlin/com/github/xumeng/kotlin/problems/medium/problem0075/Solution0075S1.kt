@@ -6,16 +6,19 @@ class Solution0075S1 {
     fun sortColors(nums: IntArray) {
         var i = 0
         var temp: Int
+        var minPosition: Int
         while (i < nums.size) {
             var j = i + 1
+            minPosition = i
             while (j < nums.size) {
-                if (nums[i] > nums[j]) {
-                    temp = nums[i]
-                    nums[i] = nums[j]
-                    nums[j] = temp
+                if (nums[minPosition] > nums[j]) {
+                    minPosition = j
                 }
                 j++
             }
+            temp = nums[minPosition]
+            nums[minPosition] = nums[i]
+            nums[i] = temp
             i++
         }
     }
