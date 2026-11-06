@@ -1,5 +1,6 @@
 package com.github.xumeng.kotlin.problems.medium.problem0075
 
+// 冒泡排序
 class Solution0075S2 {
 
     fun sortColors(nums: IntArray) {
