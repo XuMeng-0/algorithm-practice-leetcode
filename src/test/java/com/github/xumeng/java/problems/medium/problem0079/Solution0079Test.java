@@ -90,4 +90,15 @@ class Solution0079Test {
         assertTrue(existent);
     }
 
+    @Test
+    public void test5() {
+        char[] row1 = {'A', 'B', 'C', 'E'};
+        char[] row2 = {'S', 'F', 'E', 'S'};
+        char[] row3 = {'A', 'D', 'E', 'E'};
+        char[][] board = {row1, row2, row3};
+        String word = "ABCESEEEFS";
+        boolean existent = solution.exist(board, word);
+        assertTrue(existent);
+    }
+
 }
