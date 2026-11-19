@@ -40,7 +40,8 @@ public class Solution0079 {
             return false;
         }
         for (int[] position : positions) {
-            if (exist(board, word.substring(1), position)) {
+            char[][] cleanBoard = cloneBoard(board);
+            if (exist(cleanBoard, word.substring(1), position)) {
                 return true;
             }
         }
